@@ -9,7 +9,7 @@
   <meta name="author" content="">
   <link rel="icon" href="#">
 
-  <title>SMS Voice Free</title>
+  <title>TODO-LIST Angular</title>
 
   <!-- Bootstrap core CSS -->
   <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -87,6 +87,46 @@
     background-color: #f8f8f8;
   }
 
+
+  .todolist{
+    background-color:#FFF;
+    padding:20px 20px 10px 20px;
+    margin-top:30px;
+  }
+  .todolist h1{
+    margin:0;
+    padding-bottom:20px;
+    text-align:center;
+  }
+  .form-control{
+    border-radius:0;
+  }
+  li.ui-state-default{
+    background:#fff;
+    border:none;
+    border-bottom:1px solid #ddd;
+  }
+
+  li.ui-state-default:last-child{
+    border-bottom:none;
+  }
+
+  .todo-footer{
+    background-color:#F4FCE8;
+    margin:0 -20px -10px -20px;
+    padding: 10px 20px;
+  }
+  #done-items li{
+    padding:10px 0;
+    border-bottom:1px solid #ddd;
+    text-decoration:line-through;
+  }
+  #done-items li:last-child{
+    border-bottom:none;
+  }
+  #checkAll{
+    margin-top:10px;
+  }
 </style>
 
 <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
@@ -112,7 +152,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">SMS Voice Free</a>
+        <a class="navbar-brand" href="#">TODO-LIST Angular</a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
@@ -127,13 +167,55 @@
 
   <!-- Begin page content -->
   <div class="container">
+    <div class="row">
+      <div class="col-md-6">
 
+        <div class="panel panel-default align-center" style="border-radius: 0px;">
+          <div class="panel-heading" style="background-color: #ffffff;">
+            <h2 class="panel-title">TODO</h2>
+          </div>
+          <div class="panel-body" >
+
+        <div class="todolist not-done">
+          <div class="input-group">
+            <div class="input-group-addon">+</div>
+            <input type="text" class="form-control bfh-phone" data-format="+1 (ddd) ddd-dddd">
+          </div>
+          <hr>
+          <ul id="sortable" class="list-unstyled">
+            <li class="ui-state-default">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="" />Take out the trash</label>
+                </div>
+              </li>
+              <li class="ui-state-default">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="" />Buy bread</label>
+                  </div>
+                </li>
+                <li class="ui-state-default">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="" />Teach penguins to fly</label>
+                    </div>
+                  </li>
+                </ul>
+                <div class="todo-footer">
+                  <strong><span class="count-todos"></span></strong> Items
+                </div>
+              </div>
+
+            </div>
+            </div>
+          </div>
 
   </div>
 
   <footer class="footer">
     <div class="container">
-      <p class="text-muted">SMS Voice Free © 2015 All Rights Reserved.</p>
+      <p class="text-muted">TODO-LIST Angular © 2015 All Rights Reserved.</p>
     </div>
   </footer>
 

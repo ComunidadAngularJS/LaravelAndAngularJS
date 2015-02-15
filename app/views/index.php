@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="todoapp">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,10 +13,6 @@
 
   <!-- Bootstrap core CSS -->
   <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
-
-  <!-- Bootstrap Form Helpers -->
-  <link href="/css/bootstrap-formhelpers.min.css" rel="stylesheet" media="screen">
-
 
   <!-- Custom styles for this template -->
   <style media="screen">
@@ -233,12 +229,13 @@
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
-  <!-- Bootstrap Form Helpers -->
-  <script src="http://bootstrapformhelpers.com/assets/js/bootstrap-formhelpers.min.js"></script>
-  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <script src="/js/bootstrap-formhelpers.min.js"></script>
   <!-- LOAD Angular -->
   <script charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
 
+  <script charset="utf-8">
+    (function(){
+      var todoapp = angular.module('todoapp', []);
+    })();
+  </script>
 </body>
 </html>

@@ -147,6 +147,8 @@
   <script src="http://bootstrapformhelpers.com/assets/js/bootstrap-formhelpers.min.js"></script>
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   <script src="/js/bootstrap-formhelpers.min.js"></script>
+  <!-- LOAD Angular -->
+  <script charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
 
 </body>
 </html>

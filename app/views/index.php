@@ -91,7 +91,7 @@
   .todolist{
     background-color:#FFF;
     padding:20px 20px 10px 20px;
-    margin-top:30px;
+    margin-top:0px;
   }
   .todolist h1{
     margin:0;
@@ -168,8 +168,11 @@
   <!-- Begin page content -->
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
 
+      <div class="col-md-3">
+      </div>
+
+      <div class="col-md-6">
         <div class="panel panel-default align-center" style="border-radius: 0px;">
           <div class="panel-heading" style="background-color: #ffffff;">
             <h2 class="panel-title">TODO</h2>
@@ -178,8 +181,10 @@
 
         <div class="todolist not-done">
           <div class="input-group">
-            <div class="input-group-addon">+</div>
             <input type="text" class="form-control bfh-phone" data-format="+1 (ddd) ddd-dddd">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">Add!</button>
+            </span>
           </div>
           <hr>
           <ul id="sortable" class="list-unstyled">
@@ -209,6 +214,9 @@
 
             </div>
             </div>
+          </div>
+
+          <div class="col-md-2">
           </div>
 
   </div>

@@ -175,11 +175,11 @@
           </div>
           <div class="panel-body" >
 
-        <div class="todolist not-done">
+        <div class="todolist not-done" ng-controller="todoController">
           <div class="input-group">
             <input type="text" class="form-control bfh-phone" data-format="+1 (ddd) ddd-dddd">
             <span class="input-group-btn">
-              <button class="btn btn-default" type="button">Add!</button>
+              <button class="btn btn-default" type="button" ng-click="addTodo()">Add!</button>
             </span>
           </div>
           <hr>
@@ -219,7 +219,7 @@
 
   <footer class="footer">
     <div class="container">
-      <p class="text-muted">TODO-LIST Angular © 2015 All Rights Reserved.</p>
+      <p class="text-muted">TODO-LIST {{"Angular"}} © 2015 All Rights Reserved.</p>
     </div>
   </footer>
 
@@ -234,7 +234,18 @@
 
   <script charset="utf-8">
     (function(){
+      //Inicializo la app como un modulo
       var todoapp = angular.module('todoapp', []);
+
+      //agrego un controlador para manejar el div del todo
+      todoapp.controller('todoController', function(){
+        this.todo = {};
+        this.addTodo = function(text){
+          text.push(this.todo);
+          this.todo = {};
+        };
+      });
+
     })();
   </script>
 </body>

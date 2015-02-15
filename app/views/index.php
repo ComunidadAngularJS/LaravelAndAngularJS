@@ -175,36 +175,24 @@
           </div>
           <div class="panel-body" >
 
-        <div class="todolist not-done" ng-controller="todoController">
+        <div class="todolist not-done" ng-controller="todoController as todo">
           <div class="input-group">
-            <input type="text" class="form-control bfh-phone" data-format="+1 (ddd) ddd-dddd">
+            <input type="text" class="form-control" ng-model="todo.body">
             <span class="input-group-btn">
               <button class="btn btn-default" type="button" ng-click="addTodo()">Add!</button>
             </span>
           </div>
           <hr>
           <ul id="sortable" class="list-unstyled">
-            <li class="ui-state-default">
+            <li class="ui-state-default" ng-repeat="t in todo.todos">
               <div class="checkbox">
                 <label>
-                  <input type="checkbox" value="" />Take out the trash</label>
+                  <input type="checkbox" value="" />{{t.body}}</label>
                 </div>
               </li>
-              <li class="ui-state-default">
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" value="" />Buy bread</label>
-                  </div>
-                </li>
-                <li class="ui-state-default">
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox" value="" />Teach penguins to fly</label>
-                    </div>
-                  </li>
                 </ul>
                 <div class="todo-footer">
-                  <strong><span class="count-todos"></span></strong> Items
+                  <strong><span class="count-todos"></span></strong>{{todo.todos.length}} Items
                 </div>
               </div>
 
@@ -212,10 +200,11 @@
             </div>
           </div>
 
-          <div class="col-md-2">
+          <div class="col-md-1">
           </div>
 
   </div>
+</div>
 
   <footer class="footer">
     <div class="container">
@@ -239,10 +228,21 @@
 
       //agrego un controlador para manejar el div del todo
       todoapp.controller('todoController', function(){
+        this.todos =  [
+      {
+        body: "Take out the trash"
+      },
+      {
+        body: "Buy bread"
+      },
+      {
+        body: "Teach penguins to fly"
+      }
+      ];
         this.todo = {};
         this.addTodo = function(text){
-          text.push(this.todo);
-          this.todo = {};
+          text.push(this.todos);
+          this.todos = {};
         };
       });
 
